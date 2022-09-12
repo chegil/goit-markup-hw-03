@@ -22,7 +22,7 @@ ul,
 p { margin: 0;
 }
 
-.conteiner { width: 1200px;
+.conteiner { width: 1170px;
 margin: 0 auto;
 padding-left: 15px;
 padding-right: 15px;}
@@ -65,18 +65,20 @@ body {
 
 /* шапка */
 
-.headerr {padding-top: 24px ;
-    padding-bottom: 24px;
+.headerr {
 border-bottom: 1px solid #ECECEC;}
 
 
-.headerr .link{margin-right: 30px;}
+.headerr .link{display: block;
+text-decoration: none;
+padding: 32px 0px;}
 
 .headerr .head-naw { display: flex;
     align-items: center;}
 
 
 .headerr .logo { margin-right: 93px;
+    padding: 24px 0px;
     
     font-family: 'Raleway';
     font-weight: 700;
@@ -86,7 +88,9 @@ border-bottom: 1px solid #ECECEC;}
     color: var(--minor-colour);
     text-decoration: none;}
 .logo .stud {color: var(--logo-colour);}
- 
+
+
+
 .siste-nav .link {
     font-weight: 500;
     font-size: 14px;
@@ -110,13 +114,14 @@ padding: 0px;}
 align-items: baseline;}
  
 .siste-nav { gap: 50px;}
-.siste-nav > .siste-li{padding: 0px;}
 
 .info {margin-left: auto;}
 
 .info .info-contackt:last-child {margin-left: 50px;}
 
 .info .contackts {
+padding-top: 32px;
+padding-bottom: 32px;
      
     font-weight: 500;
     font-size: 14px;
@@ -152,6 +157,7 @@ align-items: baseline;}
     color: var(--text-wite)}
 
     .about  .about-btn { 
+        border: none;
         color: var(--text-wite);
         background-color: var(--minor-colour);  
         cursor: pointer;
@@ -181,6 +187,8 @@ align-items: baseline;}
   .about-us {background-color: var(--fon-colour);
 }
   .about-us .titel {
+    
+    margin-bottom: 10px;
     font-weight: 700;
     font-size: 14px;
     line-height: 1.2;
@@ -196,21 +204,26 @@ align-items: baseline;}
         letter-spacing: 0.03em;
         color: var(--contacts-coluor);}
 
-    .about-us .about-me { display: flex;
+    .about-us .about-me { 
+        display: flex;
         padding-top: 94px;
         padding-bottom: 119px;
         padding-left: 0px;
     }
     
-    .about-us .list-li {flex-basis:  calc((100%-90px)/4); }
+    
+   
+    .about-us  .list-li { width: 270px;}
+        .about-us .list-li:not(:last-child) {margin-right: 30px;}
 
-     .about-us .titel {padding-bottom: 10px;}
+    
      
 /* -- чим ми займаємось-- */
+.our-work {padding-bottom: 94px;}
 
 .our-work .our-work-titel {
     text-align: center;
-   padding-bottom: 50px;
+   margin-bottom: 50px;
     
 
     font-weight: 700;
@@ -220,10 +233,12 @@ align-items: baseline;}
     color: var(--basic-colour);}
 
  .work { display: flex;
-    justify-content: center;
-    padding-left: 0px;
-    padding: 0px;
+         padding-left: 0px;
 }
+
+.work > .work-li {flex-basis: 270px;}
+
+
 
  .work .work-li + .work-li { margin-left: 30px;}
 
@@ -240,7 +255,7 @@ padding-bottom: 94px;}
 box-shadow: var(--box-shadow-cart);
 }
 .team .titel {
-    
+    margin-bottom: 50px;
     
     text-align: center;
     font-weight: 700;
@@ -258,7 +273,7 @@ box-shadow: var(--box-shadow-cart);
         letter-spacing: 0.03em;
         color:var(--basic-colour);}
 
-.team .text {padding-top: 10px;
+.team .text {margin-top: 10px;
             padding-bottom: 30px;
             text-align: center;
             font-weight: 400;
@@ -275,18 +290,19 @@ box-shadow: var(--box-shadow-cart);
 /* 2 верхня частина для порфоліо навігація*/
 
 .about-porfolio {text-align: center;
-padding-top: 100px;
+padding-top: 94px;
 padding-bottom: 94px;}
 
 .about-porfolio .ebout-li {display: flex;
     justify-content: center;
-padding-bottom: 55px;
+margin-bottom: 55px;
 gap: 8px;}
 
 /*.ebout-li .ebount-link:not(:first-child) {margin-left:8px}
 */
 .ebout-li .btn { border-radius: 4px;
 border: 0px;}
+.ebout-li .btn { padding: 6px 22px;}
 
 .about-porfolio .btn {background: #F5F4FA;
     color:var(--basic-colour);
@@ -315,18 +331,10 @@ color: var(--text-wite);}
 
 .hero {display: flex;
 flex-wrap: wrap;
-padding-top: 26px;} 
+margin: -15px;
+padding: 0px;} 
 
-
-
-.hero .hero-child{margin-right: 30px;}
-.hero .hero-child:nth-child(3n){margin-right: 0px;} 
-
-
-.hero .hero-child {margin-bottom: 30px;}
-.hero .hero-child:nth-last-child(-n + 3) {margin-bottom: 0px;}
-
-.hero {padding: 0px;}
+.hero-child {padding: 15px; }
 
 .hero-block { padding: 24px 20px;}
  
@@ -375,7 +383,7 @@ font-style: normal;
 
 .titel {font-family: 'Roboto';
     font-style: normal;
-padding: 0px;} 
+     padding: 0px;} 
 
    .footer .contackt {
 
@@ -400,5 +408,5 @@ padding: 0px;}
 
      .footer .adress:hover {color: var(--minor-colour);}
      .footer .adress:focus { color: var(--minor-colour);}
-      .footer .titel {padding-top: 20px;}
-      .footer .titel li {padding-bottom: 10px;}
+      .footer .titel {margin-top: 20px;}
+      .footer .titel li {margin-bottom: 10px;}
